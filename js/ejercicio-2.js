@@ -1,32 +1,23 @@
-
 let ciudades = [];
 
 while (true) {
-  var ciudad = prompt('Ingresa una ciudad (o presiona Cancelar para terminar) ');
+  let ciudad = prompt('Ingrese una ciudad o presione cancelar para finalizar:');
   if (ciudad === null) {
     break;
   }
   ciudades.push(ciudad);
 }
 
+document.write(`<p>Longitud del arreglo: ${ciudades.length}</p>`);
+document.write(`<p>Primera posicion: ${ciudades[0]}</p>`);
+document.write(`<p>Tercera posicion: ${ciudades[2]}</p>`);
+document.write(`<p>Última posición: ${ciudades[ciudades.length-1]}</p>`);
 
-document.write(ciudades);
+ciudades.push('París');
+document.write(`<p>Arreglo actualizado: ${ciudades}</p>`);
 
-// Mostramos la longitud del arreglo
-document.write("Longitud del arreglo: " + ciudades.length);
+document.write(`<p>Elemento en la segunda posicion: ${ciudades[1]}</p>`);
 
-document.write("Ciudades en las posiciones primera, tercera y última:<br>");
-document.write(ciudades[0] + "<br>");
-document.write(ciudades[2] + "<br>");
-document.write(ciudades[ciudades.length-1] + "<br>");
+ciudades[1] = 'Barcelona';
+document.write(`<p>Cuidad agregada: ${ciudades}</p>`);
 
-
-ciudades.push("París");
-document.write(ciudades);
-
-
-console.log("El elemento en la segunda posición es: " + ciudades[1]);
-
-
-ciudades.splice(1, 1, "Barcelona");
-document.write(ciudades);
